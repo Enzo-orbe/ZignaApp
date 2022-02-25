@@ -1,0 +1,58 @@
+{
+    "phones": [
+        {
+            "id": 1,
+            "brand": "Motorola",
+            "model": "G60",
+            "price": 30.000,
+            "image": "https://armoto.vtexassets.com/arquivos/ids/161363/moto_g60s_azul_2.png?v=637779805529970000",
+            "colors":  ["blue", "red", "gray"],
+            "stock": 8
+        },
+        {
+            "id": 2,
+            "brand": "Iphone",
+            "model": "X",
+            "price": 120.000,
+            "image": "https://www.muycomputer.com/wp-content/uploads/2018/03/iPhone-X-de-2018.jpg",
+            "colors": ["blue", "red", "gray"],
+            "stock": 17
+        },
+        {
+            "id": 3,
+            "brand": "Samsung",
+            "model": "A32",
+            "price": 50.000,
+            "image": "https://http2.mlstatic.com/D_NQ_NP_750894-MLA45658735400_042021-O.jpg",
+            "colors":  ["blue", "red", "gray"],
+            "stock": 12
+        },
+        {
+            "id": 4,
+            "brand": "Iphone",
+            "model": "12 Pro",
+            "price": 200.000,
+            "image": "https://www.techinn.com/f/13782/137821847/apple-iphone-12-pro-max-6gb-128gb-6.7.jpg",
+            "colors": ["blue", "red", "gray"],
+            "stock": 3
+        },
+        {
+            "id": 5,
+            "brand": "Huawei",
+            "model": "P30 Lite",
+            "price": 120.000,
+            "image": "https://consumer-img.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/p30-lite/img/Huawei-Nova-4e_bg_mobi.jpg",
+            "colors":  ["blue", "red", "gray"],
+            "stock": 0
+        },
+        {
+            "id": 6,
+            "brand": "Xiaomi",
+            "model": "Redmi Note 9",
+            "price": 30.000,
+            "image": "https://images.fravega.com/f500/6b38018cbfb2ae2d1d366848d2a7c302.jpg",
+            "colors":  ["blue", "red", "gray"],
+            "stock": 8
+        }
+    ]
+}
