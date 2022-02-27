@@ -1,0 +1,12 @@
+.phones-container {
+  padding-top: 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.phone-card {
+  background-color: blue;
+  width: 30%;
+  margin: 2px;
+  padding: 2px;
+}
