@@ -10,9 +10,5 @@ export default function configureStore() {
 
   const store = createStore(ListPhonesReducer, enhancer);
 
-  store.subscribe(() => {
-    store.getState();
-  });
-
   return store;
 }

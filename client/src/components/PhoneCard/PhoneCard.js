@@ -1,10 +1,18 @@
 import React from "react";
 import "./PhoneCard.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { asyncDetailData } from "../../redux/actions/DetailPhoneAction";
 import { listPhones } from "../../redux/reducers/ListPhonesReducer";
+import { useNavigate } from "react-router-dom";
 
 const PhoneCard = () => {
   const data = useSelector((state) => listPhones(state));
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const getDetailsPhone = (data) => {
+    dispatch(asyncDetailData(data));
+    navigate(`/detail/${data.id}`);
+  };
 
   return (
     <ul className="cards">
@@ -20,12 +28,18 @@ const PhoneCard = () => {
                   {p.brand}
                   {p.model}
                 </h2>
+                <br />
                 <p className="card_text">Colors: {p.colors}</p>
                 <p className="card_text">Price: {p.price}</p>
                 <p className="card_text">
                   Stock: {p.stock > 0 ? p.stock : "sold out"}
                 </p>
-                <button className="btn card_btn">More Details</button>
+                <button
+                  className="btn card_btn"
+                  onClick={() => getDetailsPhone(p)}
+                >
+                  More Details
+                </button>
               </div>
             </div>
           </li>
