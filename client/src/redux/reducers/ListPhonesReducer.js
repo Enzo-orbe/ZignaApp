@@ -2,7 +2,7 @@ import {
   LIST_PHONES_FETCHED,
   FETCHING_LIST_PHONES,
   FETCHING_LIST_PHONES_FAILURE,
-} from "./actions/ListPhonesConstants";
+} from "../actions/ListPhonesConstants";
 
 const initialState = {
   data: null,
@@ -22,7 +22,7 @@ const ListPhonesReducer = (state = initialState, action) => {
     case LIST_PHONES_FETCHED: {
       return {
         ...state,
-        data: action.result,
+        data: action.result?.phones,
         isFetching: false,
       };
     }
@@ -39,3 +39,9 @@ const ListPhonesReducer = (state = initialState, action) => {
 };
 
 export default ListPhonesReducer;
+
+export const getPhoneReducer = (state) => state;
+
+export const listPhones = (state) => getPhoneReducer(state).data;
+export const isFetching = (state) => getPhoneReducer(state).isFetching;
+export const error = (state) => getPhoneReducer(state).error;

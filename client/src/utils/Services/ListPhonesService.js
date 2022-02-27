@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const urlBackend = "http://localhost:300/api/phones";
+const urlBackend = "http://localhost:3001/api/phones";
 
 export const getPhonesList = () => {
   return axios
