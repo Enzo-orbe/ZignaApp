@@ -1,23 +1,25 @@
 img {
-  height: auto;
+  /* max-height: 100%; */
   max-width: 100%;
   vertical-align: middle;
+  object-fit: cover;
 }
 
 .btn {
   padding: 0.8rem;
   font-size: 14px;
   text-transform: uppercase;
-  border-radius: 4px;
   font-weight: 400;
   display: block;
   color: #ffffff;
   font-family: "Roboto";
   font-weight: bold;
   width: 100%;
+  border: none;
+  border-radius: 0;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
+  background: #4cadb9;
+  margin-bottom: 0px;
 }
 
 .btn:hover {
@@ -57,7 +59,6 @@ img {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  height: 100%;
 }
 
 .card_content {
@@ -77,8 +78,21 @@ img {
 
 .card_text {
   color: #ffffff;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
+  font-family: "Roboto";
+  font-weight: bold;
+  letter-spacing: 0, 5px;
+}
+
+.card_image {
+  height: 100%;
+}
+
+span {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
   font-family: "Roboto";
 }

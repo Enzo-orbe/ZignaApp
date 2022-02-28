@@ -20,8 +20,8 @@ const PhoneCard = () => {
         data?.map((p) => (
           <li className="cards_item" key={p.id}>
             <div className="card">
-              <div className="card_image">
-                <img src={p.image} alt={p.model} />
+              <div className="card-image">
+                <img className="top" src={p.image} alt={p.model} />
               </div>
               <div className="card_content">
                 <h2 className="card_title">
@@ -32,15 +32,16 @@ const PhoneCard = () => {
                 <p className="card_text">Colors: {p.colors}</p>
                 <p className="card_text">Price: {p.price}</p>
                 <p className="card_text">
-                  Stock: {p.stock > 0 ? p.stock : "sold out"}
+                  Stock: {p.stock > 0 ? p.stock : <span>sold out</span>}
                 </p>
-                <button
-                  className="btn card_btn"
-                  onClick={() => getDetailsPhone(p)}
-                >
-                  More Details
-                </button>
               </div>
+              <button
+                className="btn card_btn"
+                onClick={() => getDetailsPhone(p)}
+                disabled={p.stock > 0 ? false : true}
+              >
+                More Details
+              </button>
             </div>
           </li>
         ))
